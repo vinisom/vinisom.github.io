@@ -1,0 +1,981 @@
+/* =========================================================
+   PORTFÓLIO — VINICIUS DIAS
+   ========================================================= */
+
+
+/* =========================================================
+   1. CONFIGURAÇÕES GERAIS
+   ========================================================= */
+
+:root {
+    --cor-destaque: #4f8cff;
+    --cor-destaque-hover: #6ea0ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0f1115;
+    color: #f5f5f5;
+
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   2. CABEÇALHO
+   ========================================================= */
+
+.cabecalho {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 8%;
+
+    background-color: #0f1115;
+
+    border-bottom: 1px solid #292d35;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.menu a {
+    color: #b5b8c0;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    color: var(--cor-destaque);
+}
+
+
+/* =========================================================
+   3. INÍCIO
+   ========================================================= */
+
+.inicio {
+    min-height: 88vh;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 80px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.apresentacao {
+    color: #9ca3af;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+.inicio h1 {
+    font-size: 64px;
+
+    line-height: 1.1;
+
+    margin-bottom: 10px;
+}
+
+.inicio h2 {
+    color: #b5b8c0;
+
+    font-size: 30px;
+    font-weight: 400;
+
+    margin-bottom: 25px;
+}
+
+.resumo-inicio {
+    max-width: 720px;
+
+    color: #c4c7ce;
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   4. BOTÕES DO INÍCIO
+   ========================================================= */
+
+.acoes-inicio {
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+.botao {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    background-color: var(--cor-destaque);
+
+    color: #ffffff;
+
+    border: 1px solid var(--cor-destaque);
+    border-radius: 6px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+
+    background-color: var(--cor-destaque-hover);
+
+    border-color: var(--cor-destaque-hover);
+}
+
+.botao-secundario {
+    background-color: transparent;
+
+    color: #f5f5f5;
+
+    border-color: #3a3f49;
+}
+
+.botao-secundario:hover {
+    background-color: transparent;
+
+    border-color: #727986;
+}
+
+
+/* =========================================================
+   5. TECNOLOGIAS DO INÍCIO
+   ========================================================= */
+
+.tecnologias-inicio {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.tecnologias-inicio span {
+    padding: 6px 12px;
+
+    border: 1px solid #343943;
+    border-radius: 20px;
+
+    color: #aeb3bd;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   6. CONFIGURAÇÃO DAS SEÇÕES
+   ========================================================= */
+
+.secao {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 100px 30px;
+}
+
+.cabecalho-secao {
+    max-width: 650px;
+
+    margin-bottom: 45px;
+}
+
+.subtitulo-secao {
+    color: var(--cor-destaque);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.cabecalho-secao h2 {
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    margin-bottom: 12px;
+}
+
+.cabecalho-secao > p:last-child {
+    color: #aeb3bd;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   7. GRID DOS PROJETOS
+   ========================================================= */
+
+.lista-projetos {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   8. CARDS DOS PROJETOS
+   ========================================================= */
+
+.projeto-card {
+    min-height: 340px;
+
+    padding: 28px;
+
+    background-color: #15181e;
+
+    border: 1px solid #292e37;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform 0.25s,
+        border-color 0.25s;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #525966;
+}
+
+
+/* =========================================================
+   9. PROJETO PRINCIPAL
+   ========================================================= */
+
+.projeto-principal {
+    grid-column: 1 / -1;
+
+    min-height: 360px;
+
+    background: linear-gradient(
+        135deg,
+        #15181e 0%,
+        #171d27 100%
+    );
+
+    border-color: #354866;
+}
+
+.projeto-principal:hover {
+    border-color: var(--cor-destaque);
+}
+
+.projeto-principal h3 {
+    font-size: 30px;
+}
+
+.projeto-principal > p {
+    max-width: 700px;
+
+    font-size: 16px;
+}
+
+.destaque-projeto {
+    color: var(--cor-destaque) !important;
+
+    border-color: #354866 !important;
+}
+
+
+/* =========================================================
+   10. TOPO DOS CARDS
+   ========================================================= */
+
+.projeto-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+.numero-projeto {
+    color: #7f8793;
+
+    font-size: 14px;
+}
+
+.tipo-projeto {
+    padding: 5px 10px;
+
+    border: 1px solid #343a44;
+    border-radius: 20px;
+
+    color: #9da4af;
+
+    font-size: 12px;
+}
+
+.projeto-card h3 {
+    margin-bottom: 15px;
+}
+
+.projeto-card:not(.projeto-principal) h3 {
+    font-size: 23px;
+}
+
+.projeto-card > p {
+    color: #aeb3bd;
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   11. FLUXO DO PROJETO PRINCIPAL
+   ========================================================= */
+
+.fluxo-projeto {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.fluxo-projeto span {
+    padding: 7px 12px;
+
+    background-color: #1c2027;
+
+    border: 1px solid #343a44;
+    border-radius: 6px;
+
+    color: #d2d5db;
+
+    font-size: 13px;
+}
+
+.fluxo-projeto strong {
+    color: var(--cor-destaque);
+
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   12. TAGS DE TECNOLOGIAS
+   ========================================================= */
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+.tecnologias span {
+    padding: 5px 10px;
+
+    background-color: #1c2027;
+
+    border: 1px solid #292e37;
+    border-radius: 5px;
+
+    color: #c1c5cc;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   13. LINKS DOS PROJETOS
+   ========================================================= */
+
+.link-projeto {
+    margin-top: auto;
+
+    color: var(--cor-destaque);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+.link-projeto:hover {
+    color: var(--cor-destaque-hover);
+}
+
+.todos-projetos {
+    margin-top: 35px;
+
+    text-align: center;
+}
+
+.todos-projetos a {
+    color: #aeb3bd;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.todos-projetos a:hover {
+    color: var(--cor-destaque);
+}
+
+
+/* =========================================================
+   14. SOBRE MIM
+   ========================================================= */
+
+.sobre-conteudo {
+    max-width: 850px;
+
+    display: grid;
+
+    gap: 18px;
+}
+
+.sobre-conteudo p {
+    color: #b7bbc4;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   15. EXPERIÊNCIA
+   ========================================================= */
+
+.experiencia-card {
+    padding: 32px;
+
+    background-color: #15181e;
+
+    border: 1px solid #292e37;
+    border-radius: 12px;
+
+    transition: 0.25s;
+}
+
+.experiencia-card:hover {
+    border-color: #4a515e;
+}
+
+.experiencia-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 30px;
+
+    margin-bottom: 22px;
+}
+
+.experiencia-topo h3 {
+    font-size: 23px;
+
+    margin-bottom: 4px;
+}
+
+.experiencia-topo p {
+    color: #9da4af;
+
+    font-size: 15px;
+}
+
+.experiencia-topo > span {
+    color: var(--cor-destaque);
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+.experiencia-descricao {
+    max-width: 800px;
+
+    color: #b7bbc4;
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   16. HABILIDADES
+   ========================================================= */
+
+.lista-habilidades {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.habilidade-card {
+    min-height: 210px;
+
+    padding: 26px;
+
+    background-color: #15181e;
+
+    border: 1px solid #292e37;
+    border-radius: 12px;
+
+    transition:
+        transform 0.25s,
+        border-color 0.25s;
+}
+
+.habilidade-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #4a515e;
+}
+
+.habilidade-card h3 {
+    font-size: 19px;
+
+    margin-bottom: 18px;
+}
+
+.habilidade-card p {
+    color: #aeb3bd;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   17. FORMAÇÃO
+   ========================================================= */
+
+.formacao-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+.formacao-card {
+    padding: 30px;
+
+    background-color: #15181e;
+
+    border: 1px solid #292e37;
+    border-radius: 12px;
+
+    transition: 0.25s;
+}
+
+.formacao-card:hover {
+    border-color: #4a515e;
+}
+
+.periodo {
+    display: block;
+
+    color: var(--cor-destaque);
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+}
+
+.formacao-card h3 {
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+
+.formacao-card p {
+    color: #aeb3bd;
+
+    font-size: 15px;
+
+    margin-bottom: 7px;
+}
+
+
+/* =========================================================
+   18. CONTATO
+   ========================================================= */
+
+.contato {
+    text-align: center;
+
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.contato h2 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.contato-texto {
+    color: #aeb3bd;
+
+    font-size: 17px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   19. LINKS PROFISSIONAIS
+   ========================================================= */
+
+.links-contato {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.links-contato a {
+    min-width: 110px;
+
+    padding: 11px 20px;
+
+    border: 1px solid #343943;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.links-contato a:hover {
+    background-color: var(--cor-destaque);
+
+    color: #ffffff;
+
+    border-color: var(--cor-destaque);
+}
+
+
+/* =========================================================
+   20. DADOS DE CONTATO
+   ========================================================= */
+
+.dados-contato {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 60px;
+
+    margin-top: 40px;
+}
+
+.dado-contato {
+    min-width: 230px;
+
+    text-align: left;
+}
+
+.dado-contato span {
+    display: block;
+
+    color: #7f8793;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 5px;
+}
+
+.dado-contato p {
+    color: #d2d5db;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   21. RODAPÉ
+   ========================================================= */
+
+.rodape {
+    padding: 25px 30px;
+
+    border-top: 1px solid #292d35;
+
+    color: #777e89;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   22. RESPONSIVIDADE — TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .cabecalho {
+        padding: 20px 5%;
+    }
+
+    .menu {
+        gap: 16px;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .inicio h1 {
+        font-size: 52px;
+    }
+
+    .lista-habilidades {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   23. RESPONSIVIDADE — CELULAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .cabecalho {
+        position: static;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+    .menu {
+        width: 100%;
+
+        overflow-x: auto;
+
+        padding-bottom: 5px;
+    }
+
+    .menu a {
+        white-space: nowrap;
+    }
+
+    .inicio {
+        min-height: auto;
+
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .inicio h1 {
+        font-size: 44px;
+    }
+
+    .inicio h2 {
+        font-size: 24px;
+    }
+
+    .resumo-inicio {
+        font-size: 16px;
+    }
+
+    .acoes-inicio {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .secao {
+        padding: 75px 20px;
+    }
+
+    .cabecalho-secao h2 {
+        font-size: 31px;
+    }
+
+
+    /* PROJETOS */
+
+    .lista-projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .projeto-principal {
+        grid-column: auto;
+
+        min-height: auto;
+    }
+
+    .projeto-principal h3 {
+        font-size: 25px;
+    }
+
+
+    /* FLUXO DO PROJETO */
+
+    .fluxo-projeto {
+        gap: 7px;
+    }
+
+    .fluxo-projeto span {
+        font-size: 12px;
+
+        padding: 6px 9px;
+    }
+
+
+    /* HABILIDADES */
+
+    .lista-habilidades {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* FORMAÇÃO */
+
+    .formacao-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* EXPERIÊNCIA */
+
+    .experiencia-topo {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    /* CONTATO */
+
+    .contato h2 {
+        font-size: 34px;
+    }
+
+    .dados-contato {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 25px;
+    }
+
+    .dado-contato {
+        width: 100%;
+
+        min-width: auto;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   24. CELULARES PEQUENOS
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .inicio h1 {
+        font-size: 38px;
+    }
+
+    .inicio h2 {
+        font-size: 22px;
+    }
+
+    .projeto-card {
+        min-height: auto;
+    }
+
+    .projeto-topo {
+        align-items: flex-start;
+    }
+
+}
